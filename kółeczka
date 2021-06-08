@@ -1,0 +1,87 @@
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles">
+                    <div class="col p-md-0">
+                        <h4>Strona główna</h4>
+                    </div>
+                    <div class="col p-md-0">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-4 mb-4 text-center mb-lg-0">
+                                        <div class="circle-progress mt-4">
+                                            <div class="circle-wrapper">
+                                                <div id="invoice-circle-1"></div>
+                                                <div class="absolute-icons">
+                                                    <img src="../../assets/images/icons/20.png" alt="">
+                                                    <h6 class="mt-2">15</h6>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div id="invoice-circle-1"></div>
+                                            <div class="absolute-icons">
+                                                <img src="../../assets/images/icons/20.png" alt="">
+                                                <h6 class="mt-2">20 Invoice</h6>
+                                            </div> -->
+                                            <div class="bottom-text mt-2">
+                                                <h4 class="text-info  mt-4"><span>Usecase</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 mb-4 text-center mb-lg-0">
+                                        <div class="circle-progress mt-4">
+                                            <div class="circle-wrapper">
+                                                <div id="invoice-circle-2"></div>
+                                                <div class="absolute-icons">
+                                                    <img src="../../assets/images/icons/21.png" alt="">
+                                                    <h6 class="mt-2">4</h6>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-text mt-2">
+                                                <h4 class="text-danger  mt-4"><span>Aktorzy</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 mb-4 text-center mb-lg-0">
+                                        <div class="circle-progress mt-4">
+                                            <div class="circle-wrapper">
+                                                <div id="invoice-circle-3"></div>
+                                                <div class="absolute-icons">
+                                                    <img src="../../assets/images/icons/22.png" alt="">
+                                                    <h6 class="mt-2">15</h6>
+                                                </div>
+                                            </div>
+                                            <div class="bottom-text mt-2">
+                                                <h4 class="text-warning  mt-4"><span>Interfejsów</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- #/ container -->
+
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>System zarządzania logistyką magazynową</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .content-body {
+            min-height: 1500px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo"><a href="index.html"><b><img src="..\..\assets\images\logo.png" alt=""> </b><span class="brand-title"><img src="../../assets/images/uml-banner.png" alt=""></span></a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger"><span class="line"></span> <span class="line"></span> <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <div>
+                            <select class="form-control" name="theme_version" id="theme_version">
+                                <option value="dark">Noc</option>    
+                                <option value="light">Dzień</option>
+                                </select>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Strona główna</li>
+                    <li class="mega-menu mega-menu-lg">
+                        <a class="has-arrow" href="index.html" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard"></i><span class="nav-text">Home</span><span class="badge bg-dpink text-white nav-badge">1</span>
+                        </a>
+                    </li>
+                    <li class="nav-label">Problematyka</li>
+                    <li><a class="has-arrow" href="./opis.html" aria-expanded="false"><i class="mdi mdi-ticket"></i><span class="nav-text">Opis</span> <span class="badge bg-lgreen text-white nav-badge">2</span></a>
+                    </li>
+                    <li class="nav-label">Diagramy i przypadki użycia</li>
+                    <li><a class="has-arrow" href="./diagram_przypadków_uzycia.html" aria-expanded="false"><i class="mdi mdi-book-open-page-variant"></i><span class="nav-text" style="font-size:13px;">Diagram przypadków użycia</span> <span class="badge badge-info nav-badge">1</span></a>
+                    </li>
+                    <li><a class="has-arrow" href="./diagram_analityczny.html" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="nav-text">Diagram analityczny</span> <span class="badge bg-dpink text-white nav-badge">1</span></a>
+                    </li>
+                    <li class="mega-menu mega-menu-lg">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="mdi mdi-gradient"></i>
+                            <span class="nav-text" style="font-size: 13px; margin-left: -5px;">Lista przypadków użycia</span><span class="badge badge-info nav-badge">15</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="./wyswietl_trasy_przewozu.html">Wyświetl trasę przewozu</a>
+                            </li>
+                            <li><a href="./edytuj_trase_przewozu.html">Edytuj trasę przewozu</a>
+                            </li>
+                            <li><a href="./utworz_trase_przewozu.html">Utwórz trasę przewozu</a>
+                            </li>
+
+                            <li><a href="wyswietl_listy_przewozowe.html">Wyświetl listy przewozowe</a>
+                            </li>
+                            <li><a href="edytuj_list_przewozowy.html">Edytuj list przewozowy</a>
+                            </li>
+                            <li><a href="./utworz_list_przewozowy.html">Utwórz list przewozowy</a>
+                            </li>
+                            <li><a href="./zarzadzaj_dokumentami_rozchodu_towaru.html">Zarządzaj dokumentami rozchodu towaru </a>
+                            </li>
+                            <li><a href="./stworz_raport_o_stanie_magazynu.html">Stwórz raport o stanie magazynu</a>
+                            </li>
+                            <li><a href="./wyswietl_liste_kontrahentow.html">Wyświetl listę kontrahentów</a>
+                            </li>
+                            <li><a href="./edytuj_kontrahenta.html">Edytuj kontrahenta</a>
+                            </li>
+                            <li><a href="./dodaj_nowego_kontrahenta.html">Dodaj nowego kontrahenta</a>
+                            </li>
+                            <li><a href="./wyswietl_zamowienie.html">Wyświetl zamówienie</a>
+                            </li>
+                            <li><a href="./edytuj_zamowienie.html">Edytuj zamówienie</a>
+                            </li>
+                            <li><a href="./utworz_nowe_zamowienie.html">Utwórz nowe zamówienie</a>
+                        </ul>
+
+                        <li><a class="has-arrow" href="./diagram_klas.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Diagram klas</span> <span class="badge badge-primary nav-badge">1</span></a>
+                        </li>
+                        <li><a class="has-arrow" href="./historyjka.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="nav-text">Historyjka</span> <span class="badge badge-primary nav-badge">1</span></a>
+                        </li>
+                        <li class="nav-label">Słownik Pojęć</li>
+                        <li class="mega-menu mega-menu-xl"><a class="has-arrow" href="slownik_pojec_wlasciwy.html" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="nav-text">Słownik pojęć</span> <span class="badge bg-lgreen text-white nav-badge">15</span></a>
+                        </li>
+                        <li class="mega-menu mega-menu-md"><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="mdi mdi-television-guide"></i><span class="nav-text">Aktorzy </span> <span class="badge badge-danger nav-badge">4</span></a>
+                            <ul aria-expanded="false">
+                                <li><a href="./logistyk.html">Logistyk</a>
+                                </li>
+                                <li><a href="./kierowca.html">Kierowca</a>
+                                </li>
+                                <li><a href="./referent.html">Referent ds. Zaopatrzeń</a>
+                                </li>
+                                <li><a href="./magazynier.html">Magazynier</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mega-menu mega-menu-xl"><a class="has-arrow" href="opis_zadan.html" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="nav-text">Opis zadań</span> <span class="badge bg-lgreen text-white nav-badge">15</span></a>
+                        </li>
+
+                        <li class="nav-label">Extra</li>
+                        <li><a class="has-arrow" href="./index-game.html" aria-expanded="false"><i class="mdi mdi-message-draw"></i><span class="nav-text">może się nudzisz?</span><span class="badge badge-success nav-badge">03</span></a>
+                        </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <div class="content-body">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="faq-heading my-5">
+                            <h1 class="text-center"><i class="fa fa-comments" aria-hidden="true"></i> Główne cele naszego systemu</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row faq-tab-panel">
+                    <div class="col-lg-3">
+                        <div class="nav flex-column nav-pills faq-pills border-0 mt-0">
+                            <a href="#v-pills-general" data-toggle="pill" class="nav-link active show">
+                                <div class="media">
+                                    <div class="nav-icon align-self-center">
+                                        <i class="fa fa-empire" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Główny cel</h4>
+                                        <p>Optymalizacja oraz zarządzanie</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#v-pills-features" data-toggle="pill" class="nav-link">
+                                <div class="media">
+                                    <div class="nav-icon align-self-center">
+                                        <i class="fa fa-diamond" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="text-primary">Zarządzanie pracą magazynu</h4>
+                                        <p>Poprawne funkcjonowanie</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#v-pills-privacy" data-toggle="pill" class="nav-link">
+                                <div class="media">
+                                    <div class="nav-icon align-self-center">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="text-primary">O nas</h4>
+                                        <p>Kilka słów o tym czym się zajmujemy</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#v-pills-enterprise" data-toggle="pill" class="nav-link">
+                                <div class="media">
+                                    <div class="nav-icon align-self-center">
+                                        <i class="fa fa-empire" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="text-primary">Podsumowanie</h4>
+                                        <p>złozoność naszego przedsięwzięcia</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <div class="card tab-pane fade active show" id="v-pills-general">
+                                <div class="card-body">
+                                    <div class="media media-intro">
+                                        <div class="nav-icon mr-3">
+                                            <i class="fa fa-empire" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Zarządzanie pracą magazynu</h4>
+                                            <p>Optymalizacja oraz zarządzanie</p>
+                                        </div>
+                                    </div>
+                                    <div id="accordion-one" class="accordion default-accordion-style">
+
+
+                                        <i class="fa" aria-hidden="true"></i>
+
+                                    </div>
+                                    <p> Nasz system uwzględnia zespół czynności egzekwowanych w ramach planowania i zarządzania łańcuchem dostaw. W jej skład wchodzą takie zadania jak:
+                                        <ul style="list-style-type: circle; margin-left: 20px;">
+                                            <li style="list-style-type: circle;">Przyjęcie towarów do magazynu</li>
+                                            <li style="list-style-type: circle;">Składowanie towarów w magazynie</li>
+                                            <li style="list-style-type: circle;">Wysyłka towarów do klienta</li>
+                                        </ul>
+                                    </p>
+                                    <p>Aby dobrze zarządzać magazynem w firmie, trzeba mieć odpowiednio zorganizowany system przepływu informacji oraz dobrze ułożony system wyznaczający lokalizację poszczególnych towarów w magazynie. Zadaniem naszego systemu
+                                        logistyki magazynowej jest właściwa kontrola i weryfikacja przepływu towarów na – etapie magazynowania.
+                                    </p>
+                                    <p>Celem głównym systemu zarządzania logistyką magazynową jest regulowanie przepływu zróżnicowanych towarów na każdym etapie magazynowania materiałów oraz minimalizacja kosztów operacyjnych przy równoległym zachowaniu
+                                        optymalnego poziomu usług. </p>
+                                    <p>Logistyka magazynowa dąży do optymalizacji powierzchni magazynowej oraz dba o odpowiednie wykorzystanie zasobów, dobrze organizuje sposób pracy operatorów logistycznych oraz gwarantuje sprawny dostęp do ładunków na
+                                        każdym etapie magazynowania.</p>
+                                </div>
+                            </div>
+                            <!-- start -->
+                            <div class="card tab-pane fade" id="v-pills-features">
+                                <div class="card-body">
+                                    <div class="media media-intro">
+                                        <div class="nav-icon mr-3">
+                                            <i class="fa fa-diamond" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Zarządzanie pracą magazynu</h4>
+                                            <p>Poprawne funkcjonowanie</p>
+                                        </div>
+                                    </div>
+                                    <div id="accordion-one" class="accordion default-accordion-style">
+
+
+                                        <i class="fa" aria-hidden="true"></i> Co mamy na myśli pisząc o zarządzaniu pracą magazynu?
+
+                                    </div>
+                                    <p> Nowoczesne technologie pozwalają zarządzać zapasami magazynu na optymalnym poziomie co ułatwia organizację pracy magazynu. Na każdym etapie łańcucha dostaw możliwa jest pełna identyfikowalność towaru oraz stałe zapewnienie
+                                        wymaganej ilości składowych zapasów, która jest niezbędna do efektywnego funkcjonowania magazynu.</p>
+
+                                    <p>
+                                        Do najlepszych rozwiązań z tego zakresu zalicza się:
+                                        <ul style="list-style-type: circle; margin-left: 20px;">
+                                            <li style="list-style-type: circle;">Nowoczesne rozwiązanie WMS (Warehouse Management System), które w ścisłej współpracy z dowolnym systemem ERP, koordynuje, kontroluje i zarządza procesami zachodzącymi w magazynie. System pozwala na optymalne
+                                                rozmieszczenie towarów i nośników na lokalizacjach magazynowych, wspiera proces kompletacji poprzez zaplanowanie optymalnej kolejności pobierania produktów i jak najkrótszych tras, które maja pokonać operatorzy,
+                                                rzeczywisty podgląd stanu zapasów oraz zarządzanie dokumentacją magazynową.</li>
+                                            <li style="list-style-type: circle;">Infrastruktura AutoID: są to rozwiązania, które wspierają procesy zachodzące w magazynie, najczęściej są zintegrowane z systemem WMS jak np. terminale radiowe, urządzenia voicepicking czy pick to light.</li>
+                                        </ul>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <!-- end -->
+
+                            <div class="card tab-pane fade" id="v-pills-privacy">
+                                <div class="card-body">
+                                    <div class="media media-intro">
+                                        <div class="nav-icon mr-3">
+                                            <i class="fa fa-lock" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>O nas</h4>
+                                            <p>Kilka słów o tym czym się zajmujemy</p>
+                                        </div>
+                                    </div>
+                                    <div id="accordion-one" class="accordion default-accordion-style">
+
+
+                                        <i class="fa" aria-hidden="true"></i>
+
+                                    </div>
+                                    <p>
+                                        Nasza firma specializuje się w przetwarzaniu prduktów skrobiowych na surowy spirytus, idąc z duchem rozwoju pojawiło się zapotrzebowanie na modernizacje systemu zarządzania logistyką magazynową. Na przeciw temu wyzwaniu wyszło dwóch studentów Uniwersytetu
+                                        Warmińsko-Mazurskiego, postanowili zaprojektować taki system czego efekty możemy zobaczyć na tej stronie.
+                                    </p>
+                                    <p>
+                                        Zacier w procesie fermentacji potrzebuje skrobii, dlatego też ciągłość w jej dostawie jest niezbędna do prawidłowego funkcjonowania gorzelni, kto lepiej będzie wiedział kiedy jest jej deficyt na magazynie jak nie magazynier, tak też w naszym systemie
+                                        Magazynier jest odpowiedzialny za generowanie raportów o stanie magazynu, pomaga mu w tym system informując go kiedy dolna granica poziomu surowca zostanie przekroczona. Kiedy raport zostanie wygenerowany trafia
+                                        do Referenta ds. zapatrzeń który ma dostęp do pełnej listy kontrahentów i wie kiedy i z czym do kogo się zgłosić aby uzupełnić braki na magazynie, nawiasem mówiąc Referent posiada prawo do tworzenia oraz do edycji
+                                        istniejących zamówień, może również dodawać nowych oraz edytować istniejących już kontrahentów. Kiedy Referent złoży zamówienie ktoś musi je przywieźć, od takich spraw mamy niezawodnego Kierowce, który oprócz przewożenia
+                                        ładunków z punktu A do punktu B, zajmuje się także tworzeniem oraz edycją listów przewozowych. Nad trasą która musi pokonać Kierowca czuwa Logistyk, który sprawnie tworzy oraz edytuje istniejące trasy przewozu.
+                                        Kiedy już wszystko dotrze na miejsce Magazynier odbiera przywiezione towary i aktualizuje przestażałe już deficyty tak aby drożdże spokojnie mogły przerabiać skrobie na alkohol.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card tab-pane fade" id="v-pills-enterprise">
+                                <div class="card-body">
+                                    <div class="media media-intro">
+                                        <div class="nav-icon mr-3">
+                                            <i class="fa fa-empire" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Podsumowanie</h4>
+                                            <p>Złożoność naszego przedsięwzięcia</p>
+                                        </div>
+                                    </div>
+                                    <div id="accordion-one" class="accordion default-accordion-style">
+
+
+                                        <i class="fa" aria-hidden="true"></i>
+
+                                    </div>
+                                    <p> Logistyka magazynowa jest bardzo złożonym i skomplikowanym przedsięwzięciem, prowadzenie jej wymaga posiadania umiejętności i kompetencji w doborze odpowiednich rozwiązań, a przede wszystkim praktycznego doświadczenia
+                                        we wprowadzaniu ich „w życie”. Dlatego nasza usługa jest idealnym rozwiązaniem dla firm; decydują się na wdrożenie systemu WMS, który pomoże w odpowiednim zarządzaniu zasobami oraz przestrzenią magazynową. Dzięki
+                                        naszemu systemowi można oszczędzić czas i pieniądze oraz zagwarantować sobie i swoim pracownikom wysoką jakość procesów realizowanych ramach logistyki magazynowej.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #/ container -->
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright &copy; Designed by <a href="https://www.facebook.com/kacper.gruszczynski05">Kaceper</a>, Developed by <a href="https://www.facebook.com/janek.brunow">JankoMuzykant</a> 2021</p>
+        </div>
+    </div>
+    <!--**********************************
+            Footer end
+        ***********************************-->
+
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="../../assets/plugins/common/common.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/gleek.js"></script>
+    <script src="../js/styleSwitcher.js"></script>
+
+    <script src="../../assets/plugins/circle-progress/circle-progress.min.js"></script>
+    <script src="../js/plugins-init/circle-invoice-init.js"></script>
+</body>
+
+</html>

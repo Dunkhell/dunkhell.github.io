@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>System zarządzania logistyką magazynową</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .content-body {
+            min-height: 1500px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo"><a href="index.html"><b><img src="..\..\assets\images\logo.png" alt=""> </b><span class="brand-title"><img src="../../assets/images/uml-banner.png" alt=""></span></a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger"><span class="line"></span> <span class="line"></span> <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <div class="header-left">
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <div>
+                            <select class="form-control" name="theme_version" id="theme_version">
+                                <option value="dark">Noc</option>    
+                                <option value="light">Dzień</option>
+                                </select>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Strona główna</li>
+                    <li class="mega-menu mega-menu-lg">
+                        <a class="has-arrow" href="index.html" aria-expanded="false">
+                            <i class="mdi mdi-view-dashboard"></i><span class="nav-text">Home</span><span class="badge bg-dpink text-white nav-badge">1</span>
+                        </a>
+                    </li>
+                    <li class="nav-label">Problematyka</li>
+                    <li><a class="has-arrow" href="./opis.html" aria-expanded="false"><i class="mdi mdi-ticket"></i><span class="nav-text">Opis</span> <span class="badge bg-lgreen text-white nav-badge">2</span></a>
+                    </li>
+                    <li class="nav-label">Diagramy i przypadki użycia</li>
+                    <li><a class="has-arrow" href="./diagram_przypadków_uzycia.html" aria-expanded="false"><i class="mdi mdi-book-open-page-variant"></i><span class="nav-text" style="font-size:13px;">Diagram przypadków użycia</span> <span class="badge badge-info nav-badge">1</span></a>
+                    </li>
+                    <li><a class="has-arrow" href="./diagram_analityczny.html" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="nav-text">Diagram analityczny</span> <span class="badge bg-dpink text-white nav-badge">1</span></a>
+                    </li>
+                    <li class="mega-menu mega-menu-lg">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="mdi mdi-gradient"></i>
+                            <span class="nav-text" style="font-size: 13px; margin-left: -5px;">Lista przypadków użycia</span><span class="badge badge-info nav-badge">15</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="./wyswietl_trasy_przewozu.html">Wyświetl trasę przewozu</a>
+                            </li>
+                            <li><a href="./edytuj_trase_przewozu.html">Edytuj trasę przewozu</a>
+                            </li>
+                            <li><a href="./utworz_trase_przewozu.html">Utwórz trasę przewozu</a>
+                            </li>
+
+                            <li><a href="wyswietl_listy_przewozowe.html">Wyświetl listy przewozowe</a>
+                            </li>
+                            <li><a href="edytuj_list_przewozowy.html">Edytuj list przewozowy</a>
+                            </li>
+                            <li><a href="./utworz_list_przewozowy.html">Utwórz list przewozowy</a>
+                            </li>
+                            <li><a href="./zarzadzaj_dokumentami_rozchodu_towaru.html">Zarządzaj dokumentami rozchodu towaru </a>
+                            </li>
+                            <li><a href="./stworz_raport_o_stanie_magazynu.html">Stwórz raport o stanie magazynu</a>
+                            </li>
+                            <li><a href="./wyswietl_liste_kontrahentow.html">Wyświetl listę kontrahentów</a>
+                            </li>
+                            <li><a href="./edytuj_kontrahenta.html">Edytuj kontrahenta</a>
+                            </li>
+                            <li><a href="./dodaj_nowego_kontrahenta.html">Dodaj nowego kontrahenta</a>
+                            </li>
+                            <li><a href="./wyswietl_zamowienie.html">Wyświetl zamówienie</a>
+                            </li>
+                            <li><a href="./edytuj_zamowienie.html">Edytuj zamówienie</a>
+                            </li>
+                            <li><a href="./utworz_nowe_zamowienie.html">Utwórz nowe zamówienie</a>
+                        </ul>
+
+                        <li><a class="has-arrow" href="./diagram_klas.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="nav-text">Diagram klas</span> <span class="badge badge-primary nav-badge">1</span></a>
+                        </li>
+                        <li><a class="has-arrow" href="./historyjka.html" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="nav-text">Historyjka</span> <span class="badge badge-primary nav-badge">1</span></a>
+                        </li>
+                        <li class="nav-label">Słownik Pojęć</li>
+                        <li class="mega-menu mega-menu-xl"><a class="has-arrow" href="slownik_pojec_wlasciwy.html" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="nav-text">Słownik pojęć</span> <span class="badge bg-lgreen text-white nav-badge">15</span></a>
+                        </li>
+                        <li class="mega-menu mega-menu-md"><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="mdi mdi-television-guide"></i><span class="nav-text">Aktorzy </span> <span class="badge badge-danger nav-badge">4</span></a>
+                            <ul aria-expanded="false">
+                                <li><a href="./logistyk.html">Logistyk</a>
+                                </li>
+                                <li><a href="./kierowca.html">Kierowca</a>
+                                </li>
+                                <li><a href="./referent.html">Referent ds. Zaopatrzeń</a>
+                                </li>
+                                <li><a href="./magazynier.html">Magazynier</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mega-menu mega-menu-xl"><a class="has-arrow" href="opis_zadan.html" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="nav-text">Opis zadań</span> <span class="badge bg-lgreen text-white nav-badge">15</span></a>
+                        </li>
+
+                        <li class="nav-label">Extra</li>
+                        <li><a class="has-arrow" href="./index-game.html" aria-expanded="false"><i class="mdi mdi-message-draw"></i><span class="nav-text">może się nudzisz?</span><span class="badge badge-success nav-badge">03</span></a>
+                        </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="timeline_content">
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">01.04.2021</span>
+                            </div>
+                            <ul class="timeline">
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge">
+                                        <span class="text-pale-sky">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Pierwszy task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Diagram Przypadków Użycia dziedziny problemowej. Projekt zaczął się od pomysłu, który spisaliśmy na papirusie, żeby nigdy nie zaginął. Pierwszego dnia ustanowiliśmy aktorów, wymagania funkcjonalne systemu
+                                                    oraz zanotowaliśmy słownik pojęć systemowych. Taki sprawny początek pozwolił nam na płynne przejście w budowanie naszego projektu. Głównym fundamentem jest Diagram Przypadków Użycia, który mimo powstania
+                                                    pierwszego dnia zmieniał się każdego kolejnego, aby uzyskać perfekcję, do której doszliśmy dnia ostatniego. </p>
+                                                <div class="reaction-section d-flex my-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">08.04.2021</span>
+                            </div>
+                            <ul class="timeline">
+
+                                <li>
+                                    <div class="timeline-badge">
+                                        <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Drugi task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Diagram Analityczny Drugiego dnia czekało nas ogromne wyzwanie, Diagram Analityczny (potocznie nazywany przez naszych projektantów Diagramem Kolorowym). Zadanie te wymagało od nas wielkiego skupienia, gdyż
+                                                    występuje w nim wiele problemów, które nie tak łatwo obejść. Pierwszym, zarazem głównym, problemem było zrozumienie różnicy między boundry, control i entity objects. Na szczęście mieliśmy świetną pomoc
+                                                    naukową i wspólnymi siłami pokonaliśmy te zadanie w try mi ga! Gdy zabraliśmy się do pracy nad składaniem graficznego przedstawienia naszego diagramu napotkaliśmy kolejny problem, ktoś mógłby powiedzieć,
+                                                    że równej powagi co poprzedni. Program, w którym projektowaliśmy diagram miał ogromne problemy z wyrównaniem obiektów i linii łączących co zajęło nam dodatkowe nadgodziny pracy przy poprawianiu! Takie
+                                                    przeszkody jednak nie pokonały naszych dzielnych studentów!</p>
+                                                <div class="reaction-section d-flex mb-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">15.04.2021</span>
+                            </div>
+                            <ul class="timeline">
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge">
+                                        <span class="text-pale-sky">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Trzeci task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Scenariusz i Diagram Aktywności Trzeciego dnia zasiedliśmy do opisywania scenariusza przebiegu Przypadków Użycia w naszym systemie. Na tym etapie pojawiło się najmniej problemów ironicznie jednak zajął on
+                                                    nam najwięcej czasu na zakończenie. Było to częściowo spowodowane przejrzystym celem zadania ale też świetnym przygotowaniem merytorycznym z zajęć. Pozytywnie na wykonanie zadania wpłynął też fakt, że
+                                                    jest to najbardziej programistyczna część budowania Systemu Informatycznego. </p>
+                                                <div class="reaction-section d-flex my-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">22.04.2021</span>
+                            </div>
+                            <ul class="timeline">
+
+                                <li>
+                                    <div class="timeline-badge">
+                                        <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Czwarty task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Diagram Sekwencji Czwarty dzień zaczęliśmy od opisania współpracy aktora z interfejsem aby umożliwić użytkownikowi komunikację z system bezpośrednio. Informacje umieściliśmy na Diagramie Sekwencji, który
+                                                    dla normalnego śmiertelnika jest najbardziej niezrozumiałym i zakręcony Diagram. Fortuna nam jednak sprzyjała, mieliśmy ekipę złożoną ze światowej klasy śmiertelników, którzy współpracą pokonali Diagram
+                                                    Sekwencji zachowując przy tym piękny styl i proste strzałki komunikacji 8). </p>
+                                                <div class="reaction-section d-flex mb-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">29.04.2021</span>
+                            </div>
+                            <ul class="timeline">
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge">
+                                        <span class="text-pale-sky">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Piąty task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Interfejsy Piąty dzień przyniósł ogromną ulgę. Tego dnia zajęliśmy się graficznym przedstawieniem interfejsu dla Przypadków Użycia. Praca nad tym zadaniem przyniosła nam ogromną zabawę, gdyż mogliśmy uwolnić
+                                                    wewnętrznych artystów i stworzyć najpiękniejsze dzieło artystyczne jakie widziała cała rasa ludzka. Jedynym wyzwaniem, które napotkaliśmy dnia piątego było zachowanie spójności diagramów wraz z interfejsami,
+                                                    zajęło to trochę czasu jednak udało nam się osiągnąć nasz cel i dopięliśmy jeden z ostatnich guzików na drodze do stworzenia własnego Systemu Informatycznego.</p>
+                                                <div class="reaction-section d-flex my-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">12.05.2021</span>
+                            </div>
+                            <ul class="timeline">
+
+                                <li>
+                                    <div class="timeline-badge">
+                                        <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Szósty task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Diagram Klas, Diagram Obiektów. Szósty dzień przyniósł nowe wyzwania. Zapoznaliśmy się z Diagramem Klas, który z początku wyglądał na bardzo skomplikowaną strukturę klas, nad którą musieliśmy spędzić najbliższy
+                                                    wieczór. Pierwsze podejście poniosło ogromną klęskę. Nasz Diagram nie nadawał się do użycia w naszym projekcie co gorsza nie mieliśmy pomysłów aby go poprawić. Postanowiliśmy zaciągnąć dodatkową wiedzę
+                                                    od naszego guru UML. Udało się! Konsultacje zaowocowały całkowitym zrozumieniem konceptu Diagramu Klas i poprawnie wykonany Diagram Klas, który można znaleźć w naszej dokumentacji, był już tylko kwestią
+                                                    czasu. Następnie zajęliśmy się tworzeniem Diagramu Obiektów, przykładowe zastosowanie Diagramu Klas. Banalne zadanie które wykonaliśmy tego samego dnia i przeszliśmy do ostatniego punktu przed metą.
+                                                </p>
+                                                <div class="reaction-section d-flex mb-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="timeline-timestamp">
+                                <span class="badge badge-primary">19.05.2021</span>
+                            </div>
+                            <ul class="timeline">
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge">
+                                        <span class="text-pale-sky">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="card story-widget">
+                                            <div class="card-header border-bottom d-flex justify-content-between align-items-center">
+                                                <h4 class="heading-primary mb-0">Siódmy task</h4>
+                                                <p class="font-small text-dark mb-0">4 godziny</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Budowanie Strony Internetowej Siódmego dnia nastała pora na zakończenie pracy nad budowaniem Projektu Informatycznego, zasiedliśmy razem z drużynowym full stack developerem do budowania strony internetowej
+                                                    (na której aktualnie się znajdujesz!). Projektowanie strony jest dla niego chlebem powszednim więc w chwilę moment zaprezentował mi swoją wizję i kolejną chwilę później jego wizja stała się rzeczywistością.
+                                                    Sfinalizowany projekt umieściliśmy do wglądu publicznego, a nam, projektantom, nie zostało nic więcej niż wyjechać na Bahamy, usiąść na plaży trzymając koktajl kokosowy w ręku i oczekiwać następnego
+                                                    semestru wyzwań na uczelni.</p>
+                                                <div class="reaction-section d-flex my-3">
+                                                    <div class="like">
+                                                        <i class="fa fa-heart"></i>
+                                                        <span class="count mr-4 ml-2">2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed by <a href="https://www.facebook.com/kacper.gruszczynski05">Kaceper</a>, Developed by <a href="https://www.facebook.com/janek.brunow">JankoMuzykant</a> 2021</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="../../assets/plugins/common/common.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/gleek.js"></script>
+    <script src="../js/styleSwitcher.js"></script>
+
+    <script src="../../assets/plugins/circle-progress/circle-progress.min.js"></script>
+    <script src="../js/plugins-init/circle-invoice-init.js"></script>
+</body>
+
+</html>
